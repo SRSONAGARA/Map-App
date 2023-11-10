@@ -16,21 +16,22 @@ class DirectionRepository {
     required LatLng origin,
     required LatLng destination,
   }) async {
-    final response = await _dio.get(
-      _baseUrl,
-      queryParameters: {
-        /*'origin': '${22.996565},${72.537830}',
-        'destination': '${23.022574},${72.571386}',*/
-        'origin': '${origin.latitude},${origin.longitude}',
-        'destination': '${destination.latitude},${destination.longitude}',
-        'key': googleAPIKey,
-      },
-    );
+    try {
+      final response = await _dio.get(
+        _baseUrl,
+        queryParameters: {
+          'origin': '${origin.latitude},${origin.longitude}',
+          'destination': '${destination.latitude},${destination.longitude}',
+          'key': googleAPIKey,
+        },
+      );
 
-    if (response.statusCode == 200) {
-      // print('response:${response.data}');
-      return Directions.fromMap(response.data);
+      if (response.statusCode == 200) {
+        return Directions.fromMap(response.data);
+      }
+      return null;
+    } catch (e) {
+      print(e);
     }
-    return null;
   }
 }
