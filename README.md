@@ -1,16 +1,21 @@
-# map_app
+<h1 align="center">Flutter Map App</h1>
 
-A new Flutter project.
+<p align="center">
+  A Flutter application for exploring maps, setting routes, and fetching directions using Google Maps API.
+</p>
 
-## Getting Started
+<p align="center">
+  <img src="assets/app_preview.jpg" alt="App Preview" width="40%">
+</p>
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🗺️ Explore Google Maps with ease.
+- 📍 Set origin and destination markers effortlessly.
+- 🚗 Fetch and visualize directions between chosen points.
+- 📏 View real-time information about the total distance and estimated duration of your route.
+- 📍 Get Latitude-Longitude of tapped point.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Dependencies
+- Dio: For making HTTP requests.
+- Google Maps Flutter: For integrating Google Maps.
