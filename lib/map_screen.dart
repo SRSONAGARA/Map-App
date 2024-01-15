@@ -1,13 +1,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:map_app/direction_repository.dart';
 import 'package:map_app/models/direction_model.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
@@ -237,7 +235,7 @@ class _MapScreenState extends State<MapScreen> {
                             builder: (_) => AlertDialog(
                                   contentPadding: EdgeInsets.zero,
                                   title: const Text(
-                                      'Please first get your current location then share.'),
+                                      'Please first get your current location by clicking focus button.'),
                                   actions: [
                                     ElevatedButton(
                                         onPressed: () {
